@@ -1,0 +1,10 @@
+using Microsoft.EntityFrameworkCore;
+using CoachFlow.Api.Models;
+
+namespace CoachFlow.Api.Data;
+
+public class CoachFlowContext : DbContext
+{
+    public CoachFlowContext(DbContextOptions<CoachFlowContext> options) : base(options) {}
+    public DbSet<Client> Clients => Set<Client>();
+}
